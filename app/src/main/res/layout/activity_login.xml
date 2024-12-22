@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".LoginActivity"
+        android:background="@color/white">
+
+        <!-- Logo -->
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/logo" />
+
+        <!-- Judul -->
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/Lahap"
+            android:textSize="40sp"
+            app:layout_constraintTop_toBottomOf="@id/imageView4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Subjudul -->
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/lato_regular"
+            android:text="Deliver Favourite Food"
+            android:textColor="@color/textColor"
+            app:layout_constraintTop_toBottomOf="@id/textView13"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Form Email -->
+        <EditText
+            android:id="@+id/emailLogin"
+            android:layout_width="325dp"
+            android:layout_height="57dp"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/edittextshape"
+            android:drawableStart="@drawable/user_plus"
+            android:drawablePadding="15dp"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:paddingStart="15dp"
+            app:layout_constraintTop_toBottomOf="@id/textView14"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Form Password -->
+        <EditText
+            android:id="@+id/passwordLogin"
+            android:layout_width="325dp"
+            android:layout_height="57dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/edittextshape"
+            android:drawableStart="@drawable/lock"
+            android:drawablePadding="15dp"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:paddingStart="15dp"
+            app:layout_constraintTop_toBottomOf="@id/emailLogin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Tombol Login -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/loginbutton"
+            android:layout_width="152dp"
+            android:layout_height="57dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/greenbuttongradient"
+            android:fontFamily="@font/lato_bold"
+            android:text="Login"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@id/passwordLogin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Teks Tambahan -->
+        <TextView
+            android:id="@+id/donthavebutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/don_t_have_account"
+            android:textColor="@color/textColor"
+            android:textSize="14sp"
+            android:clickable="true"
+            android:focusable="true"
+            android:textStyle="bold"
+            android:padding="17dp"
+            app:layout_constraintTop_toBottomOf="@id/loginbutton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

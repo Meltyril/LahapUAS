@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "765825259918",
+    "project_id": "lahapuas",
+    "storage_bucket": "lahapuas.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:765825259918:android:5d27f90bd513eeeee3acdf",
+        "android_client_info": {
+          "package_name": "com.lahap.appuas"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBO6q37UjZugXjnNGAFgfzMNLQexd-JC78"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
