@@ -34,7 +34,7 @@ class LoginActivity : AppCompatActivity() {
             // Login menggunakan FirebaseAuthHelper
             FirebaseAuthHelper.login(email, password, { user ->
                 // Berhasil login
-                startActivity(Intent(this, HomeFragment::class.java))
+                startActivity(Intent(this, MainActivity::class.java))
                 finish()
             }, { error ->
                 // Gagal login
