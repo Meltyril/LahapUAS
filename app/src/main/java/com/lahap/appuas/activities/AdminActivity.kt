@@ -23,27 +23,16 @@ class AdminActivity : AppCompatActivity() {
         binding = ActivityAdminBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Initialize image picker launcher
-        imagePickerLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
-            if (result.resultCode == RESULT_OK) {
-                imageUri = result.data?.data // Get selected image URI
-                binding.ivMenuImage.setImageURI(imageUri) // Preview image
-            }
-        }
-
-        // Setup image picker
-
-
         // Add new menu item
         binding.btnAddMenu.setOnClickListener {
             val name = binding.etMenuName.text.toString()
             val price = binding.etMenuPrice.text.toString().toDoubleOrNull()
             val description = binding.etMenuDescription.text.toString()
 
-            if (name.isNotEmpty() && price != null && description.isNotEmpty() && imageUri != null) {
+            if (name.isNotEmpty() && price != null && description.isNotEmpty() ) {
                 addMenuToFirestore(name, price, description, imageUri.toString())
             } else {
-                Toast.makeText(this, "Please fill in all fields and pick an image", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Please fill in all fields", Toast.LENGTH_SHORT).show()
             }
         }
     }
@@ -53,7 +42,6 @@ class AdminActivity : AppCompatActivity() {
             "foodName" to name,
             "foodPrice" to price.toString(),
             "foodDescription" to description,
-            "foodImage" to imageUri // Store the URI directly in Firestore
         )
         db.collection("menus")
             .add(newItem)
@@ -70,7 +58,6 @@ class AdminActivity : AppCompatActivity() {
         binding.etMenuName.text.clear()
         binding.etMenuPrice.text.clear()
         binding.etMenuDescription.text.clear()
-        binding.ivMenuImage.setImageResource(android.R.color.transparent)
         imageUri = null
     }
 }
